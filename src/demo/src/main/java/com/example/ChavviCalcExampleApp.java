@@ -77,14 +77,22 @@ public class ChavviCalcExampleApp {
     switch (command) {
       case 'a':
         System.out.println("Enter a number:");
-        float inputA = scan.nextFloat();
-        valueA = inputA;
+        String inputA = scan.nextLine();
+        try{
+          valueA = Float.parseFloat(inputA);
+         } catch( Exception e){
+          System.out.println("Error: Invalid input. Please input a number.");
+        }
         break;
       case 'b':
-        System.out.println("Enter a number:");
-        float inputB = scan.nextFloat();
-        valueB = inputB;
-        break;
+      System.out.println("Enter a number:");
+      String inputB = scan.nextLine();
+      try{
+        valueB = Float.parseFloat(inputB);
+       } catch( Exception e){
+        System.out.println("Error: Invalid input. Please input a number.");
+      }
+      break;
       case '+':
         valueA = valueA + valueB;
         break;
@@ -96,7 +104,7 @@ public class ChavviCalcExampleApp {
         break;
       case '/':
         if (valueB == 0.000f) {
-          System.out.println("Can't divide by 0");
+          System.out.println("Error: Can't divide by 0");
           break;
         }
         valueA = valueA / valueB;
