@@ -76,6 +76,16 @@ public class ChavviCalcExampleApp {
     Boolean success = true;
 
     switch (command) {
+      case 'a':
+        System.out.println("Enter a number:");
+        float inputA = scan.nextFloat();
+        valueA = inputA;
+        break;
+      case 'b':
+      System.out.println("Enter a number:");
+        float inputB = scan.nextFloat();
+        valueB = inputB;
+        break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
