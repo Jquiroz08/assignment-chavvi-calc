@@ -31,8 +31,7 @@ public class ChavviCalcExampleApp {
   //
   private static void printMenuLine() {
     System.out.println(
-      "----------------------------------------------------------"
-    );
+        "----------------------------------------------------------");
   }
 
   private static void printMenuCommand(Character command, String desc) {
@@ -44,7 +43,7 @@ public class ChavviCalcExampleApp {
     printMenuLine();
     System.out.println("ChavviCalc");
     printMenuLine();
-    System.out.println( "A = " + String.format("%.3f", valueA) +"     "  + "B = "+ String.format("%.3f", valueB) );
+    System.out.println("A = " + String.format("%.3f", valueA) + "     " + "B = " + String.format("%.3f", valueB));
     printMenuLine();
     printMenuCommand('a', "Enter a value for A");
     printMenuCommand('b', "Enter a value for B");
@@ -82,7 +81,7 @@ public class ChavviCalcExampleApp {
         valueA = inputA;
         break;
       case 'b':
-      System.out.println("Enter a number:");
+        System.out.println("Enter a number:");
         float inputB = scan.nextFloat();
         valueB = inputB;
         break;
@@ -96,11 +95,15 @@ public class ChavviCalcExampleApp {
         valueA = valueA * valueB;
         break;
       case '/':
-       if (valueB == 0.000f) {
-        System.out.println("Can't divide by 0");
-        break;
-       }
+        if (valueB == 0.000f) {
+          System.out.println("Can't divide by 0");
+          break;
+        }
         valueA = valueA / valueB;
+        break;
+      case 'c':
+        valueA = 0.000f;
+        valueB = 0.000f;
         break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
