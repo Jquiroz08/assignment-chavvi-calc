@@ -86,6 +86,22 @@ public class ChavviCalcExampleApp {
         float inputB = scan.nextFloat();
         valueB = inputB;
         break;
+      case '+':
+        valueA = valueA + valueB;
+        break;
+      case '-':
+        valueA = valueA - valueB;
+        break;
+      case '*':
+        valueA = valueA * valueB;
+        break;
+      case '/':
+       if (valueB == 0.000f) {
+        System.out.println("Can't divide by 0");
+        break;
+       }
+        valueA = valueA / valueB;
+        break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
