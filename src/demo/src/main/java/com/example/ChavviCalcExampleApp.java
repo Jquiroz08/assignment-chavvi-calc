@@ -78,21 +78,21 @@ public class ChavviCalcExampleApp {
       case 'a':
         System.out.println("Enter a number:");
         String inputA = scan.nextLine();
-        try{
+        try {
           valueA = Float.parseFloat(inputA);
-         } catch( Exception e){
+        } catch (Exception e) {
           System.out.println("Error: Invalid input. Please input a number.");
         }
         break;
       case 'b':
-      System.out.println("Enter a number:");
-      String inputB = scan.nextLine();
-      try{
-        valueB = Float.parseFloat(inputB);
-       } catch( Exception e){
-        System.out.println("Error: Invalid input. Please input a number.");
-      }
-      break;
+        System.out.println("Enter a number:");
+        String inputB = scan.nextLine();
+        try {
+          valueB = Float.parseFloat(inputB);
+        } catch (Exception e) {
+          System.out.println("Error: Invalid input. Please input a number.");
+        }
+        break;
       case '+':
         valueA = valueA + valueB;
         break;
